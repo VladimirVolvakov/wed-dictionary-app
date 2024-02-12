@@ -13,18 +13,6 @@ const GlobalStyles = createGlobalStyle`
     --color-purple: #a445ed;
     --color-red: #ff5252;
   }
-
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  html {
-    font-size: 62.5%;
-  }
   
   /* Font families: */
   --font-monospace: "Inconsolata", monospace;
@@ -45,8 +33,22 @@ const GlobalStyles = createGlobalStyle`
   --line-height-body-md: 2.4rem;
   --line-height-body-sm: 1.7rem;
 
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     min-height: 100vh;
+    font-family: var(--font-sans-serif);
+    color: var(--color-grey-darker);
     font-size: var(--f-size-body-md);
     line-height: var(--line-height-body-md);
   }

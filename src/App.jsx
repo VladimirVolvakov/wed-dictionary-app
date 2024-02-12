@@ -1,12 +1,15 @@
-import GlobalStyles from "./styles/GlobalStyles"
+import GlobalStyles from "./styles/GlobalStyles";
+import Header from "./ui/Header";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      Web Dictionary App
+      <Header />
+      <main>Main</main>
+      <footer>Footer</footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

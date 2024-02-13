@@ -12,7 +12,6 @@ const GlobalStyles = createGlobalStyle`
     --color-white: #fff;
     --color-purple: #a445ed;
     --color-red: #ff5252;
-  }
   
   /* Font families: */
   --font-monospace: "Inconsolata", monospace;
@@ -32,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
   --line-height-heading-sm: 2.4rem;
   --line-height-body-md: 2.4rem;
   --line-height-body-sm: 1.7rem;
+}
 
   *,
   *::before,

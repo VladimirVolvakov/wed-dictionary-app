@@ -1,10 +1,9 @@
 import LogoImg from "../assets/images/logo.svg";
-import MoonImg from "../assets/images/icon-moon.svg";
 import styled from "styled-components";
 import ModeSwitcher from "./ModeSwitcher";
 
-const HeaderContainer = styled.div`
-  width: 51.18%;
+const StyledHeader = styled.header`
+  width: 100%;
   max-width: 73.7rem;
   margin: 5.8rem auto 0;
   display: flex;
@@ -18,7 +17,6 @@ const LogoImage = styled.img`
 
 const ControlsContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 `;
 
@@ -49,38 +47,23 @@ const FontTypeOption = styled.option`
   line-height: var(--line-height-body-md);
 `;
 
-const ModeToggler = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 2.6rem;
-`;
-
-const ModeSwitcherImage = styled.img`
-  height: 2rem;
-`;
-
 const Header = () => {
   return (
-    <header>
-      <HeaderContainer>
-        <LogoImage src={LogoImg} alt="Web Dictionary App Logo" />
-        <ControlsContainer>
-          <FontTypeContainer>
-            <FontTypeSelector name="font-type">
-              <FontTypeOption value="sans-serif" selected>
-                Sans Serif
-              </FontTypeOption>
-              <FontTypeOption value="serif">Serif</FontTypeOption>
-              <FontTypeOption value="mono">Mono</FontTypeOption>
-            </FontTypeSelector>
-          </FontTypeContainer>
-          <ModeToggler>
-            <ModeSwitcher />
-            <ModeSwitcherImage src={MoonImg} alt="Turn on dark mode" />
-          </ModeToggler>
-        </ControlsContainer>
-      </HeaderContainer>
-    </header>
+    <StyledHeader>
+      <LogoImage src={LogoImg} alt="Web Dictionary App Logo" />
+      <ControlsContainer>
+        <FontTypeContainer>
+          <FontTypeSelector name="font-type">
+            <FontTypeOption value="sans-serif" selected>
+              Sans Serif
+            </FontTypeOption>
+            <FontTypeOption value="serif">Serif</FontTypeOption>
+            <FontTypeOption value="mono">Mono</FontTypeOption>
+          </FontTypeSelector>
+        </FontTypeContainer>
+        <ModeSwitcher />
+      </ControlsContainer>
+    </StyledHeader>
   );
 };
 

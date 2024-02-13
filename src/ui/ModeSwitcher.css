@@ -1,4 +1,10 @@
-label {
+.mode-switcher {
+  display: flex;
+  align-items: center;
+  padding-left: 2.6rem;
+}
+
+.label {
   display: block;
   position: relative;
   height: 2rem;
@@ -8,31 +14,35 @@ label {
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.3s;
-
-  &::after {
-    content: "";
-    position: absolute;
-    height: 1.4rem;
-    width: 1.4rem;
-    background-color: var(--color-white);
-    border-radius: 50%;
-    top: 0.3rem;
-    left: 0.3rem;
-    transition: all 0.3s;
-  }
 }
 
-input {
+.label::after {
+  content: "";
+  position: absolute;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  top: 0.3rem;
+  left: 0.3rem;
+  transition: all 0.3s;
+}
+
+.input {
   height: 0;
   width: 0;
   visibility: hidden;
+}
 
-  &:checked + label {
-    background-color: var(--color-purple);
-  }
+.input:checked + .label {
+  background-color: var(--color-purple);
+}
 
-  &:checked + label::after {
-    left: 3.7rem;
-    transform: translateX(-100%);
-  }
+.input:checked + .label::after {
+  left: 3.7rem;
+  transform: translateX(-100%);
+}
+
+.img {
+  height: 2rem;
 }

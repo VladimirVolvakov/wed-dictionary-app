@@ -13,25 +13,25 @@ const GlobalStyles = createGlobalStyle`
     --color-purple: #a445ed;
     --color-red: #ff5252;
   
-  /* Font families: */
-  --font-monospace: "Inconsolata", monospace;
-  --font-sans-serif: "Inter", sans-serif;
-  --font-serif: "Lora", serif;
+    /* Font families: */
+    --font-monospace: "Inconsolata", monospace;
+    --font-sans-serif: "Inter", sans-serif;
+    --font-serif: "Lora", serif;
 
-  /* Basic font sizes:  */
-  --f-size-heading-lg: 6.4rem;
-  --f-size-heading-md: 2.4rem;
-  --f-size-heading-sm: 2rem;
-  --f-size-body-md: 1.8rem;
-  --f-size-body-sm: 1.4rem;
+    /* Basic font sizes:  */
+    --f-size-heading-lg: 6.4rem;
+    --f-size-heading-md: 2.4rem;
+    --f-size-heading-sm: 2rem;
+    --f-size-body-md: 1.8rem;
+    --f-size-body-sm: 1.4rem;
 
-  /* Basic fonts' line height values: */
-  --line-height-heading-lg: 7.7rem;
-  --line-height-heading-md: 2.9rem;
-  --line-height-heading-sm: 2.4rem;
-  --line-height-body-md: 2.4rem;
-  --line-height-body-sm: 1.7rem;
-}
+    /* Basic fonts' line height values: */
+    --line-height-heading-lg: 7.7rem;
+    --line-height-heading-md: 2.9rem;
+    --line-height-heading-sm: 2.4rem;
+    --line-height-body-md: 2.4rem;
+    --line-height-body-sm: 1.7rem;
+  }
 
   *,
   *::before,

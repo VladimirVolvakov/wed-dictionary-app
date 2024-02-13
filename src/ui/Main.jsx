@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SearchInput from "./SearchInput";
+import WordHeader from "./WordHeader";
 
 const StyledMain = styled.main`
   width: 100%;
@@ -11,6 +12,7 @@ const Main = () => {
   return (
     <StyledMain>
       <SearchInput />
+      <WordHeader />
     </StyledMain>
   );
 };

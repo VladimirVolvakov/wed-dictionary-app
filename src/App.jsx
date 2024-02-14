@@ -4,6 +4,7 @@ import Main from "./ui/Main";
 import Wrapper from "./ui/Wrapper";
 
 function App() {
+  
   return (
     <>
       <GlobalStyles />

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledMeanings = styled.section`
-  padding: 4rem 0;
+  padding: 4rem 0 1.9rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -182,6 +182,7 @@ const Meanings = () => {
           </DefinitionTypes>
         </RelatedDefinitions>
       </Meaning>
+      <HorizontalRule />
     </StyledMeanings>
   );
 };

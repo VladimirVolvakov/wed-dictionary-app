@@ -2,6 +2,7 @@ import styled from "styled-components";
 import SearchInput from "./SearchInput";
 import WordHeader from "./WordHeader";
 import Meanings from "./Meanings";
+import Source from "./Source";
 
 const StyledMain = styled.main`
   width: 100%;
@@ -15,6 +16,7 @@ const Main = () => {
       <SearchInput />
       <WordHeader />
       <Meanings />
+      <Source />
     </StyledMain>
   );
 };

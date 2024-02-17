@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import SearchIcon from "../assets/images/icon-search.svg";
-import { useState } from "react";
 
 const Form = styled.form`
   position: relative;
@@ -38,9 +37,7 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const SearchInput = () => {
-  const [searchQuery, setSearchQuery] = useState("keyboard");
-
+const SearchInput = ({ searchQuery, setSearchQuery }) => {
   const inputSubmitHandler = (event) => {
     event.preventDefault();
     

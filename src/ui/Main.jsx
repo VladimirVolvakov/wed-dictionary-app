@@ -10,10 +10,12 @@ const StyledMain = styled.main`
   margin: 0 auto;
 `;
 
-const Main = () => {
+const Main = ({ currentWord, searchQuery, setSearchQuery }) => {
+  const { word, phonetic, phonetics, meanings, sourceUrl } = currentWord;
+
   return (
     <StyledMain>
-      <SearchInput />
+      <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <WordHeader />
       <Meanings />
       <Source />

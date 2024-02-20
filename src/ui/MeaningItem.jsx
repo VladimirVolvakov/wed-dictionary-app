@@ -90,7 +90,7 @@ const MeaningItem = ({ meaning }) => {
   return (
     <StyledMeaning>
       <PartOfSpeech>
-        <PartOfSpeechTitle>noun</PartOfSpeechTitle>
+        <PartOfSpeechTitle>{meaning.partOfSpeech}</PartOfSpeechTitle>
         <HorizontalRule />
       </PartOfSpeech>
       <MeaningsList>
@@ -126,16 +126,22 @@ const MeaningItem = ({ meaning }) => {
           </DefinitionItem>
         </DefinitionsList>
       </MeaningsList>
-      <RelatedDefinitions>
-        <DefinitionTypes>
-          <Title>Synonyms</Title>
-          <TypeExample>electronic keyboard</TypeExample>
-        </DefinitionTypes>
-        <DefinitionTypes>
-          <Title>Antonyms</Title>
-          <TypeExample>electronic keyboard</TypeExample>
-        </DefinitionTypes>
-      </RelatedDefinitions>
+      {(meaning.synonyms || meaning.antonyms) && (
+        <RelatedDefinitions>
+          {meaning.synonyms.length > 0 && (
+            <DefinitionTypes>
+              <Title>Synonyms</Title>
+              <TypeExample>{meaning.synonyms.join(", ")}</TypeExample>
+            </DefinitionTypes>
+          )}
+          {meaning.antonyms.length > 0 && (
+            <DefinitionTypes>
+              <Title>Antonyms</Title>
+              <TypeExample>{meaning.antonyms.join(", ")}</TypeExample>
+            </DefinitionTypes>
+          )}
+        </RelatedDefinitions>
+      )}
     </StyledMeaning>
   );
 };

@@ -103,7 +103,7 @@ const Meanings = ({ meanings }) => {
   console.log(meanings)
   return (
     <StyledMeanings>
-      { meanings.map((meaning, index) => <MeaningItem key={index} meaning={meaning} />)}
+      { meanings?.map((meaning, index) => <MeaningItem key={index} meaning={meaning} />)}
       {/* <Meaning>
         <PartOfSpeech>
           <PartOfSpeechTitle>noun</PartOfSpeechTitle>

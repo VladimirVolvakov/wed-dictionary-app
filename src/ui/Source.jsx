@@ -21,14 +21,14 @@ const Link = styled.a`
   margin-right: 0.9rem;
 `;
 
-const Source = () => {
+const Source = ({ src }) => {
   return (
     <SourceInfo>
       <Text>Source</Text>
-      <Link href="https://en.wiktionary.org/wiki/keyboard" target="blank">
-        https://en.wiktionary.org/wiki/keyboard
+      <Link href={src} target="blank">
+        {src}
       </Link>
-      <Link href="https://en.wiktionary.org/wiki/keyboard" target="blank">
+      <Link href={src} target="blank">
         <img src={OpenNewWindowImg} alt="Open source in the new browser tab" />
       </Link>
     </SourceInfo>

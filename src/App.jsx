@@ -5,7 +5,7 @@ import Main from "./ui/Main";
 import Wrapper from "./ui/Wrapper";
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState("keyboard");
+  const [searchQuery, setSearchQuery] = useState("dick");
   const [currentWord, setCurrentWord] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
@@ -19,8 +19,7 @@ function App() {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setCurrentWord(data);
-        console.log(data);
+        setCurrentWord(data.at(0));
       } catch (error) {
         setErrorMessage(error?.message);
         throw new Error(

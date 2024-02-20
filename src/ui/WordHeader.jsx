@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import useSound from "use-sound";
 import PlayBtnImg from "../assets/images/icon-play.svg";
 
 const StyledWordHeader = styled.section`
@@ -32,14 +33,16 @@ const SpellButton = styled.button`
   cursor: pointer;
 `;
 
-const WordHeader = () => {
+const WordHeader = ({ audio, phonetic, word }) => {
+  const [play] = useSound(audio);
+
   return (
     <StyledWordHeader>
       <div>
-        <SearchedWord>keyboard</SearchedWord>
-        <WordTranscription>/ˈkiːbɔːd/</WordTranscription>
+        <SearchedWord>{word}</SearchedWord>
+        <WordTranscription>{phonetic}</WordTranscription>
       </div>
-      <SpellButton>
+      <SpellButton onClick={play}>
         <img src={PlayBtnImg} alt="Click to check word spelling" />
       </SpellButton>
     </StyledWordHeader>

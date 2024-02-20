@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import MeaningItem from "./MeaningItem";
 
 const StyledMeanings = styled.section`
   padding: 4rem 0 1.9rem;
@@ -7,101 +8,103 @@ const StyledMeanings = styled.section`
   gap: 4rem;
 `;
 
-const Meaning = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-`;
+// const Meaning = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 4rem;
+// `;
 
-const PartOfSpeech = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-`;
+// const PartOfSpeech = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 2rem;
+// `;
 
-const PartOfSpeechTitle = styled.h2`
-  font-family: var(--font-sans-serif);
-  font-size: var(--f-size-heading-md);
-  line-height: var(--line-height-heading-md);
-  font-style: italic;
-  font-weight: 700;
-  color: var(--color-grey-darker);
-`;
+// const PartOfSpeechTitle = styled.h2`
+//   font-family: var(--font-sans-serif);
+//   font-size: var(--f-size-heading-md);
+//   line-height: var(--line-height-heading-md);
+//   font-style: italic;
+//   font-weight: 700;
+//   color: var(--color-grey-darker);
+// `;
 
-const HorizontalRule = styled.hr`
+export const HorizontalRule = styled.hr`
   color: var(--color-grey-light);
   height: 1px;
   flex: 1;
 `;
 
-const MeaningsList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-`;
+// const MeaningsList = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 2.5rem;
+// `;
 
-const Title = styled.h3`
-  font-family: var(--font-sans-serif);
-  font-size: var(--f-size-heading-sm);
-  line-height: var(--line-height-heading-sm);
-  font-weight: 400;
-  color: var(--color-grey);
-`;
+// const Title = styled.h3`
+//   font-family: var(--font-sans-serif);
+//   font-size: var(--f-size-heading-sm);
+//   line-height: var(--line-height-heading-sm);
+//   font-weight: 400;
+//   color: var(--color-grey);
+// `;
 
-const DefinitionsList = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1.3rem;
-`;
+// const DefinitionsList = styled.ul`
+//   list-style: none;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1.3rem;
+// `;
 
-const DefinitionItem = styled.li`
-  display: flex;
+// const DefinitionItem = styled.li`
+//   display: flex;
 
-  &::before {
-    content: "•";
-    height: 0.5rem;
-    width: 0.5rem;
-    color: var(--color-purple);
-    margin: 0 2rem 0 2.2rem;
-  }
-`;
+//   &::before {
+//     content: "•";
+//     height: 0.5rem;
+//     width: 0.5rem;
+//     color: var(--color-purple);
+//     margin: 0 2rem 0 2.2rem;
+//   }
+// `;
 
-const DefinitionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.3rem;
-`;
+// const DefinitionContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1.3rem;
+// `;
 
-const Definition = styled.p``;
+// const Definition = styled.p``;
 
-const Example = styled.p`
-  color: var(--color-grey);
-`;
+// const Example = styled.p`
+//   color: var(--color-grey);
+// `;
 
-const RelatedDefinitions = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+// const RelatedDefinitions = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `;
 
-const DefinitionTypes = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2.2rem;
-`;
+// const DefinitionTypes = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 2.2rem;
+// `;
 
-const TypeExample = styled.span`
-  font-family: var(--font-sans-serif);
-  font-size: var(--f-size-heading-sm);
-  line-height: var(--line-height-heading-sm);
-  font-weight: 700;
-  color: var(--color-purple);
-`;
+// const TypeExample = styled.span`
+//   font-family: var(--font-sans-serif);
+//   font-size: var(--f-size-heading-sm);
+//   line-height: var(--line-height-heading-sm);
+//   font-weight: 700;
+//   color: var(--color-purple);
+// `;
 
-const Meanings = () => {
+const Meanings = ({ meanings }) => {
+  console.log(meanings)
   return (
     <StyledMeanings>
-      <Meaning>
+      { meanings.map((meaning, index) => <MeaningItem key={index} meaning={meaning} />)}
+      {/* <Meaning>
         <PartOfSpeech>
           <PartOfSpeechTitle>noun</PartOfSpeechTitle>
           <HorizontalRule />
@@ -181,7 +184,7 @@ const Meanings = () => {
             <TypeExample></TypeExample>
           </DefinitionTypes>
         </RelatedDefinitions>
-      </Meaning>
+      </Meaning> */}
       <HorizontalRule />
     </StyledMeanings>
   );

@@ -25,7 +25,7 @@ const Main = ({ currentWord, searchQuery, setSearchQuery }) => {
       <WordHeader word={currentWord?.word} phonetic={currentWord?.phonetic} 
       // audio={audio} 
       />
-      <Meanings />
+      <Meanings meanings={currentWord?.meanings} />
       <Source src={currentWord?.sourceUrls} />
     </StyledMain>
   );

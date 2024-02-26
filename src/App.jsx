@@ -5,7 +5,7 @@ import Main from "./ui/Main";
 import Wrapper from "./ui/Wrapper";
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState("dick");
+  const [searchQuery, setSearchQuery] = useState("keyboard");
   const [currentWord, setCurrentWord] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState();

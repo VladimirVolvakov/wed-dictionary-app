@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { HorizontalRule } from "./Meanings";
+import DefinitionItem from "./DefinitionItem";
 
 const StyledMeaning = styled.div`
   display: flex;
@@ -43,30 +44,6 @@ const DefinitionsList = styled.ul`
   gap: 1.3rem;
 `;
 
-const DefinitionItem = styled.li`
-  display: flex;
-
-  &::before {
-    content: "•";
-    height: 0.5rem;
-    width: 0.5rem;
-    color: var(--color-purple);
-    margin: 0 2rem 0 2.2rem;
-  }
-`;
-
-const DefinitionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.3rem;
-`;
-
-const Definition = styled.p``;
-
-const Example = styled.p`
-  color: var(--color-grey);
-`;
-
 const RelatedDefinitions = styled.div`
   display: flex;
   flex-direction: column;
@@ -96,34 +73,9 @@ const MeaningItem = ({ meaning }) => {
       <MeaningsList>
         <Title>Meaning</Title>
         <DefinitionsList>
-          <DefinitionItem>
-            <DefinitionContainer>
-              <Definition>
-                (etc.) A set of keys used to operate a typewriter, computer etc.
-              </Definition>
-              <Example></Example>
-            </DefinitionContainer>
-          </DefinitionItem>
-          <DefinitionItem>
-            <DefinitionContainer>
-              <Definition>
-                A component of many instruments including the piano, organ, and
-                harpsichord consisting of usually black and white keys that
-                cause different tones to be produced when struck.
-              </Definition>
-              <Example></Example>
-            </DefinitionContainer>
-          </DefinitionItem>
-          <DefinitionItem>
-            <DefinitionContainer>
-              <Definition>
-                A device with keys of a musical keyboard, used to control
-                electronic sound-producing devices which may be built into or
-                separate from the keyboard device.
-              </Definition>
-              <Example></Example>
-            </DefinitionContainer>
-          </DefinitionItem>
+          {meaning.definitions.map((definition, index) => (
+            <DefinitionItem key={index} definition={definition} />
+          ))}
         </DefinitionsList>
       </MeaningsList>
       {(meaning.synonyms || meaning.antonyms) && (

@@ -40,7 +40,7 @@ const Image = styled.img`
 const SearchInput = ({ searchQuery, setSearchQuery }) => {
   const inputSubmitHandler = (event) => {
     event.preventDefault();
-    
+    setSearchQuery(event.target.value)
   };
 
   return (

@@ -11,19 +11,18 @@ const StyledMain = styled.main`
 `;
 
 const Main = ({ currentWord, searchQuery, setSearchQuery }) => {
-  // const { word, phonetic, phonetics, meanings, sourceUrls } = currentWord;
   console.log(currentWord);
-  // const { audio } = phonetics;
-
-  let audio;
-
-  
+  const wordAudios = currentWord?.phonetics?.filter(item => item.audio);
+  const audioUrl = wordAudios?.[0].audio ?? "";
+  console.log(audioUrl)
 
   return (
     <StyledMain>
       <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <WordHeader word={currentWord?.word} phonetic={currentWord?.phonetic} 
-      // audio={audio} 
+      <WordHeader
+        word={currentWord?.word}
+        phonetic={currentWord?.phonetic}
+        audio={audioUrl}
       />
       <Meanings meanings={currentWord?.meanings} />
       <Source src={currentWord?.sourceUrls} />

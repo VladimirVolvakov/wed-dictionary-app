@@ -42,9 +42,9 @@ const WordHeader = ({ audio, phonetic, word }) => {
         <SearchedWord>{word}</SearchedWord>
         <WordTranscription>{phonetic}</WordTranscription>
       </div>
-      <SpellButton onClick={play}>
+      {audio && <SpellButton onClick={play}>
         <img src={PlayBtnImg} alt="Click to check word spelling" />
-      </SpellButton>
+      </SpellButton>}
     </StyledWordHeader>
   );
 };
